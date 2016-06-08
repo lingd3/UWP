@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="HW3.AddTodoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HW3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="DeleteTodoButton" Icon="Delete" Label="delete" Click="DeleteTodoButton_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="textBlock" Grid.Row="0" Text="Edit Todo Item" Style="{StaticResource HeaderTextBlockStyle}" Margin="10,10,0,0" FontFamily="Monaco"/>
+        <Grid Margin="0,71,0,0" Grid.Row="1">
+            <ScrollViewer>
+                <StackPanel>
+                    <StackPanel.Background>
+                        <ImageBrush Stretch="Fill"/>
+                    </StackPanel.Background>
+                    <Image x:Name="TodoImage"  Source="{x:Bind ViewModel.SelectedItem.ImagePath}" Width="350" Height="180" Stretch="Fill"/>
+                    <RelativePanel Width="350">
+                        <AppBarButton x:Name="SelectPictureButton" Icon="Pictures" Label="select" RelativePanel.AlignRightWithPanel="True" Click="SelectPictureButton_Click"/>
+                    </RelativePanel>
+                    <TextBox x:Name="TitleTextBox" Width="350" Header="Title" Margin="0,12,0,0" Text="{x:Bind ViewModel.SelectedItem.Title}"/>
+                    <TextBox x:Name="DetailTextBox" Width="350" Height="96" Margin="0,12,0,0" Header="Details" Text="{x:Bind ViewModel.SelectedItem.Discription}"/>
+                    <DatePicker x:Name="DueDatePicker" Width="350" Margin="0,12,0,0" Header="Due Date" HorizontalAlignment="Center"/>
+                    <RelativePanel Width="350" Margin="0,24,0,0">
+                        <Button x:Name="CreateButton" Content="Create" Click="CreateButton_Click"></Button>
+                        <Button x:Name="UpdateButton" Content="Update" Click="UpdateButton_Click"></Button>
+                        <Button x:Name="CancelButton" Content="Cancel" RelativePanel.AlignRightWithPanel="True" Click="CancelButton_Click"></Button>
+                    </RelativePanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

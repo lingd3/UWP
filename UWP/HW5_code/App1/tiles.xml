@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tile>
+  <visual displayName="Todos">
+
+    <binding template="TileSmall">
+      <text hint-wrap="true"></text>
+      <text hint-wrap="true"></text>
+    </binding>
+
+    <binding template="TileMedium">
+      <text hint-wrap="true"></text>
+      <text hint-wrap="true"></text>
+    </binding>
+
+    <binding template="TileWide">
+      <text hint-wrap="true"></text>
+      <text hint-wrap="true"></text>
+    </binding>
+
+    <binding template="TileLarge">
+      <text hint-wrap="true"></text>
+      <text hint-wrap="true"></text>
+    </binding>
+    
+  </visual>
+</tile>

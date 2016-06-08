@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="56" Margin="100,30,0,0" TextWrapping="Wrap" Text="空气质量查询" VerticalAlignment="Top" Width="279" FontSize="32" d:LayoutOverrides="HorizontalAlignment"/>
+        <TextBlock HorizontalAlignment="Left" Margin="116,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667" Width="183" Text="城市名称" Height="38"/>
+        <TextBlock HorizontalAlignment="Left" Margin="116,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667" Width="183" Text="空气质量" Height="39"/>
+        <TextBox x:Name="place" HorizontalAlignment="Left" Margin="324,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="319"/>
+        <TextBlock x:Name="air" HorizontalAlignment="Left" Margin="325,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="319" FontSize="16"/>
+        <Button Content="查询" HorizontalAlignment="Left" Margin="315,239,0,0" VerticalAlignment="Top" Click="Button_Click" Height="41" Width="100" FontSize="24.667" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="56" Margin="100,338,0,0" TextWrapping="Wrap" Text="手机号归属地查询" Width="279" FontSize="32" d:LayoutOverrides="HorizontalAlignment" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="115,0,0,194" TextWrapping="Wrap" FontSize="26.667" Width="183" Text="手机号" Height="39" VerticalAlignment="Bottom"/>
+        <TextBlock HorizontalAlignment="Left" Margin="117,0,0,136" TextWrapping="Wrap" FontSize="26.667" Width="183" Text="归属地" Height="39" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="phone" HorizontalAlignment="Left" Margin="324,0,0,200" TextWrapping="Wrap" Width="319" Height="35" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="phone_place" HorizontalAlignment="Left" Margin="325,0,0,142" TextWrapping="Wrap" Width="319" FontSize="16" Height="32" VerticalAlignment="Bottom"/>
+        <Button Content="查询" HorizontalAlignment="Left" Margin="315,571,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="41" Width="100" FontSize="24.667" d:LayoutOverrides="HorizontalAlignment"/>
+
+        <TextBlock x:Name="infor" HorizontalAlignment="Left" Height="394" Margin="457,476,-197,-150" TextWrapping="Wrap" VerticalAlignment="Top" Width="1020" FontSize="15"/>
+    </Grid>
+</Page>
